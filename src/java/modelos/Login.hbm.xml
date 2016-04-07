@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 3/04/2016 02:58:32 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="modelos.Login" optimistic-lock="version" schema="public" table="login">
+    <id name="nusario" type="string">
+      <column length="30" name="nusario"/>
+      <generator class="foreign">
+        <param name="property">usuario</param>
+      </generator>
+    </id>
+    <one-to-one class="modelos.Usuario" constrained="true" name="usuario"/>
+    <property name="password" type="string">
+      <column length="32" name="password" not-null="true"/>
+    </property>
+  </class>
+  <sql-query name="BuscaPorNombre">
+	<return alias="Login" class="modelos.Login"/>
+	<![CDATA[select * from login where nusuario = :usuario]]>
+    </sql-query>
+</hibernate-mapping>

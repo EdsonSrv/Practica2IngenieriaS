@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+      >
+  <h:head>
+    <title>Sesion Iniciada</title>
+    <link rel="stylesheet" href="css/cssFormulario.css"/>
+  </h:head>
+  <h:body>
+    <section class="contenedorAcceso">
+      <section class="info">
+        <h2>El nuevo traje del emperador</h2>
+        <p><h:messages infoStyle="color: blue;list-style:none;"/></p>
+        <p><h:outputLabel value="Hola: "/><h:outputText value="#{logout.usuario}" style="font-weight:bold"/></p>
+       
+        <p><h:outputLabel value="Nombre del usuario: "/><h:outputText value="#{logout.nombre}" style="font-weight:bold"/>
+        <h:outputLabel value=""/><h:outputText value="#{logout.apellidos}" style="font-weight:bold"/></p>
+        <d> Hace muchos años había un Emperador tan aficionado a los trajes nuevos, que gastaba todas sus <br/>
+            rentas en vestir con la máxima elegancia.No se interesaba por sus soldados ni por el teatro, ni le <br/>
+            gustaba salir de paseo por el campo, a menos que fuera para lucir sus trajes nuevos. Tenía un vestido<br/>
+            distinto para cada hora del día, y de la misma manera que se dice de un rey: “Está en el Consejo”,<br/>
+            de nuestro hombre se decía: “El Emperador está en el vestuario”.La ciudad en que vivía el Emperador era <br/>
+            muy alegre y bulliciosa. Todos los días llegaban a ella muchísimos extranjeros, y una vez se presentaron dos <br/>
+            truhanes que se hacían pasar por tejedores, asegurando que sabían tejer las más maravillosas telas. <br/>
+            No solamente los colores y los dibujos eran hermosísimos, sino que las prendas con ellas confeccionadas<br/>
+            poseían la milagrosa virtud de ser invisibles a toda persona que no fuera apta para su cargo o que <br/>
+            fuera irremediablemente estúpida.<br/>
+            -¡Deben ser vestidos magníficos! -pensó el Emperador-. Si los tuviese, podría averiguar qué funcionarios <br/>
+            del reino son ineptos para el cargo que ocupan. Podría distinguir entre los inteligentes y los tontos.<br/>
+            Nada, que se pongan enseguida a tejer la tela-. Y mandó abonar a los dos pícaros un buen adelanto en <br/>
+            metálico, para que pusieran manos a la obra cuanto antes.
+            Ellos montaron un telar y simularon que trabajaban; pero no tenían nada en la máquina. A pesar de ello,<br/>
+            se hicieron suministrar las sedas más finas y el oro de mejor calidad, que se embolsaron bonitamente,<br/>
+            mientras seguían haciendo como que trabajaban en los telares vacíos hasta muy entrada la noche.<br/>
+            «Me gustaría saber si avanzan con la tela»-, pensó el Emperador. Pero había una cuestión que lo tenía <br/>
+            un tanto cohibido, a saber, que un hombre que fuera estúpido o inepto para su cargo no podría ver lo que <br/>
+            estaban tejiendo. No es que temiera por sí mismo; sobre este punto estaba tranquilo; pero, por si acaso, <br/>
+            prefería enviar primero a otro, para cerciorarse de cómo andaban las cosas. Todos los habitantes de la ciudad <br/>
+            estaban informados de la particular virtud de aquella tela, y todos estaban impacientes por ver hasta qué<br/>
+            punto su vecino era estúpido o incapaz.<br/> </d>
+        <h:form>
+          <section class="seccionBotones">
+            <h:commandButton value="cerrar session" action="#{logout.cerrarSession()}"/>
+          </section>
+        </h:form>
+      </section>
+    </section>
+  </h:body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 3/04/2016 02:58:32 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="modelos.Usuario" optimistic-lock="version" schema="public" table="usuario">
+    <id name="nusario" type="string">
+      <column length="30" name="nusario"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="nombre" type="string">
+      <column length="60" name="nombre"/>
+    </property>
+    <property name="apellidos" type="string">
+      <column length="110" name="apellidos"/>
+    </property>
+    <property name="edad" type="java.lang.Integer">
+      <column name="edad"/>
+    </property>
+    <one-to-one class="modelos.Login" name="login"/>
+  </class>
+  <sql-query name="BuscaInfo">
+	<return alias="Usuario" class="modelos.Usuario"/>
+	<![CDATA[select * from usuario where nusuario = :usuario]]>
+    </sql-query>
+</hibernate-mapping>
